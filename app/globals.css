@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.3rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-black text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Add heading and body font styles */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400 !important; /* Changed from bold to regular */
+  }
+
+  /* Reduce heading sizes by 20% */
+  h1 {
+    font-size: 80% !important;
+  }
+
+  h2 {
+    font-size: 80% !important;
+  }
+
+  h3 {
+    font-size: 80% !important;
+  }
+
+  .text-4xl {
+    font-size: 1.75rem !important; /* 20% smaller than 2.25rem */
+  }
+
+  .text-3xl {
+    font-size: 1.5rem !important; /* 20% smaller than 1.875rem */
+  }
+
+  .text-2xl {
+    font-size: 1.2rem !important; /* 20% smaller than 1.5rem */
+  }
+
+  .text-xl {
+    font-size: 1rem !important; /* 20% smaller than 1.25rem */
+  }
+
+  .text-lg {
+    font-size: 0.9rem !important; /* 20% smaller than 1.125rem */
+  }
+
+  .sm\:text-4xl {
+    font-size: 1.75rem !important;
+  }
+
+  .sm\:text-5xl {
+    font-size: 2.4rem !important;
+  }
+
+  .sm\:text-6xl {
+    font-size: 3rem !important;
+  }
+
+  /* Make all font-bold classes use regular weight for headings */
+  h1.font-bold,
+  h2.font-bold,
+  h3.font-bold,
+  h4.font-bold,
+  h5.font-bold,
+  h6.font-bold,
+  .font-bold h1,
+  .font-bold h2,
+  .font-bold h3,
+  .font-bold h4,
+  .font-bold h5,
+  .font-bold h6 {
+    font-weight: 400 !important;
+  }
+}
+
+.apple-button {
+  @apply px-6 py-3 rounded-none bg-primary text-primary-foreground font-medium transition-all duration-300 ease-in-out hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50;
+}
+
+.section-title {
+  @apply text-4xl mb-8 text-center text-foreground;
+  font-weight: 400 !important;
+}
+
+.text-gradient {
+  @apply text-primary;
+}
+
+.hover-lift {
+  @apply transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-md;
+}
+
+iframe {
+  background-color: black !important;
+}
+
